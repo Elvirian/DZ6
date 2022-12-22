@@ -11,7 +11,7 @@ public class Main {
         System.out.println(isPalindrome("assa"));
         Scanner sc = new Scanner(System.in);
         System.out.println("Угадай слово:.........");
-        String o = sc.nextLine();
+        String scan = sc.nextLine();
 
 
         String[] word = {"apple", "orange", "lemon", "banana", "apricot", "avocado", "broccoli", "carrot", "cherry", "garlic", "grape", "melon", "leak", "kiwi", "mango", "mushroom", "nut", "olive", " pea", "peanut", "pear", "pepper", "pineapple", "pumpkin", "potato"};
@@ -19,13 +19,14 @@ public class Main {
         int i = random.nextInt(word.length);
         String randomWord = word[i];
 
-        while (!randomWord.equals(o)) {
-            if (o == randomWord) {
+        while (!randomWord.equals(scan)) {
+            if (scan == randomWord) {
             } else {
                 StringBuilder sBrandomWord = new StringBuilder(randomWord);
                 System.out.println("не угодал вот подсказка: " + sBrandomWord.replace(2, 13, "###############"));
-                o = sc.next().toLowerCase();
+                scan = sc.next().toLowerCase();
             }
+
         }
     }
 
